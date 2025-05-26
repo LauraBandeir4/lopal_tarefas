@@ -6,36 +6,31 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.UUID;
 
 import br.dev.laura.tarefas.model.Funcionario;
+import br.dev.laura.tarefas.model.dao.FuncionarioDAO;
+import br.dev.laura.tarefas.ui.FrameFuncionario;
 
 public class Main {
 
 	private static String path = "c:\\Users\\25132517\\ProjetoTarefas\\tarefas.txt";
 
 	public static void main(String[] args) {
-		
 
-		Funcionario funcionario1 = new Funcionario("Maria da Silva");
-		Funcionario funcionario2 = new Funcionario();
+		new FrameFuncionario();
 		
-		funcionario2.setMatricula(9);
-		funcionario2.setNome("Patricia Gomes");
-		funcionario2.setCargo("Gerente de TI");
+		// Funcionario f = new Funcionario();
+		// f.setNome("Paulo Gomes");
+		// f.setCargo("Programador Júnior");
+		// f.setSalario(1989.73);
 		
-		Funcionario funcionario3 = new Funcionario("Promagador" , "Ana Maria");
-		Funcionario funcionario4 = new Funcionario("Promagador" , "Pedro", 2);
-		
-	 System.out.println(funcionario1);
-	 System.out.println(funcionario2);
-	 System.out.println(funcionario3);
-	 System.out.println(funcionario4);
-	 
-
-	
+		// FuncionarioDAO dao = new FuncionarioDAO(f);
+		// dao.gravar();
 
 	}
 
+	// Manipulando arquivos e diretórios
 	private static void gravarArquivo() {
 		FileWriter fw = null;
 		BufferedWriter bw = null;
@@ -47,13 +42,11 @@ public class Main {
 			String novaLinha = "Isso é uma nova linha!!\n";
 			String novaLinha4 = "Senai de Jandira!\n";
 			String novaLinha5 = "Turma DS1TB!\n";
-			
-			
 
 			bw.write(novaLinha);
 			bw.write(novaLinha4);
 			bw.write(novaLinha5);
-			
+
 			bw.flush();
 
 		} catch (Exception erro) {
