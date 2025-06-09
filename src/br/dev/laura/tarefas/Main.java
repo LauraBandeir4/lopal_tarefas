@@ -6,11 +6,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import br.dev.laura.tarefas.model.Funcionario;
 import br.dev.laura.tarefas.model.dao.FuncionarioDAO;
 import br.dev.laura.tarefas.ui.FrameFuncionario;
+import br.dev.laura.tarefas.ui.FrameFuncionarioList;
 
 public class Main {
 
@@ -18,13 +21,26 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		new FrameFuncionario();
-		
+		// new FrameFuncionario();
+		new FrameFuncionarioList();
+
+		FuncionarioDAO dao = new FuncionarioDAO();
+		dao.Listar();
+
+		List<Funcionario> funcionarios = dao.Listar();
+
+		for (Funcionario f : funcionarios) {
+
+			System.out.println(f.getNome());
+			System.out.println(f.getCargo());
+			System.out.println("----------");
+		}
+
 		// Funcionario f = new Funcionario();
 		// f.setNome("Paulo Gomes");
 		// f.setCargo("Programador Júnior");
 		// f.setSalario(1989.73);
-		
+
 		// FuncionarioDAO dao = new FuncionarioDAO(f);
 		// dao.gravar();
 

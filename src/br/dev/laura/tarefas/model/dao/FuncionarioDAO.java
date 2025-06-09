@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import br.dev.laura.tarefas.factory.FileFactory;
 import br.dev.laura.tarefas.model.Funcionario;
 
@@ -36,11 +35,11 @@ public class FuncionarioDAO {
 		}
 
 	}
-	
+
 	public List<Funcionario> Listar() {
 
-		//Array é o mesmo que variedade
-		
+		// Array é o mesmo que variedade
+
 		List<Funcionario> funcionarios = new ArrayList<Funcionario>();
 
 		try {
@@ -83,5 +82,4 @@ public class FuncionarioDAO {
 
 	}
 
-}
 }

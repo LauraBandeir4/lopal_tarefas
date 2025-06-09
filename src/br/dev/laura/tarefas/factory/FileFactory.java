@@ -13,17 +13,15 @@ public class FileFactory {
 	private FileWriter fw;
 	private BufferedWriter bw;
 
-	
 	private FileReader fr;
 	private BufferedReader br;
-	
-	
+
 	public FileFactory() throws IOException {
-		//importante para gravar no arquivo
+		// importante para gravar no arquivo
 		fw = new FileWriter(arquivo, true);
 		bw = new BufferedWriter(fw);
-		
-		//importante para ler no arquivo
+
+		// importante para ler no arquivo
 		fr = new FileReader(arquivo);
 		br = new BufferedReader(fr);
 	}
@@ -31,7 +29,7 @@ public class FileFactory {
 	public BufferedWriter getBufferedWriter() {
 		return bw;
 	}
-	
+
 	public BufferedReader getBufferedReader() {
 		return br;
 	}

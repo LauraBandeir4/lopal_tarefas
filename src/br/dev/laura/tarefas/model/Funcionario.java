@@ -41,7 +41,8 @@ public class Funcionario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-  // Quem gera a matrícula é o set e não o get
+
+	// Quem gera a matrícula é o set e não o get
 	public String getMatricula() {
 		return matricula;
 	}
