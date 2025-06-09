@@ -49,14 +49,14 @@ public class FuncionarioDAO {
 
 			String linha = "";
 
-			System.out.println("Começando a iteração...");
+			// System.out.println("Começando a interação...");
 
 			br.readLine();
 
 			while (linha != null) {
 
 				linha = br.readLine();
-				System.out.println(linha);
+				//System.out.println(linha);
 
 				if (linha != null) {
 

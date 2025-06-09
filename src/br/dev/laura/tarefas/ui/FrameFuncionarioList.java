@@ -22,6 +22,7 @@ import br.dev.laura.tarefas.model.dao.FuncionarioDAO;
 public class FrameFuncionarioList {
 	private JLabel labelTitulo;
 	private JButton btnCadastro;
+	
 	private JTable tabelaFuncionarios;
 	private JScrollPane scrollFuncionarios;
 	private DefaultTableModel modelFuncionario;
@@ -42,7 +43,7 @@ public class FrameFuncionarioList {
 
 		Container painel = tela.getContentPane();
 
-		labelTitulo = new JLabel("Cadastro de Funcinarios");
+		labelTitulo = new JLabel("Cadastro de Funcionarios");
 		labelTitulo.setFont(new Font("Arial", Font.BOLD, 24));
 		labelTitulo.setForeground(Color.RED);
 		labelTitulo.setBounds(10, 10, 400, 40);
@@ -80,6 +81,7 @@ public class FrameFuncionarioList {
 
 		painel.add(labelTitulo);
 		painel.add(scrollFuncionarios);
+		painel.add(btnCadastro);
 
 		tela.setVisible(true);
 

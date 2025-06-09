@@ -37,7 +37,7 @@ public class FrameFuncionario {
 		tela.setTitle("Cadastro");
 		tela.setSize(400, 400);
 		tela.setResizable(false);
-		tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		tela.setLocationRelativeTo(frame);
 		tela.setLayout(null);
 
@@ -80,6 +80,7 @@ public class FrameFuncionario {
 		painel.add(txtSalario);
 		painel.add(btnSalvar);
 		painel.add(btnSair);
+		
 
 		btnSair.addActionListener(new ActionListener() {
 

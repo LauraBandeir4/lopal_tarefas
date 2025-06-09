@@ -24,17 +24,17 @@ public class Main {
 		// new FrameFuncionario();
 		new FrameFuncionarioList();
 
-		FuncionarioDAO dao = new FuncionarioDAO();
-		dao.Listar();
-
-		List<Funcionario> funcionarios = dao.Listar();
-
-		for (Funcionario f : funcionarios) {
-
-			System.out.println(f.getNome());
-			System.out.println(f.getCargo());
-			System.out.println("----------");
-		}
+//		FuncionarioDAO dao = new FuncionarioDAO();
+//		dao.Listar();
+//
+//		List<Funcionario> funcionarios = dao.Listar();
+//
+//		for (Funcionario f : funcionarios) {
+//
+//			System.out.println(f.getNome());
+//			System.out.println(f.getCargo());
+//			System.out.println("----------");
+//		}
 
 		// Funcionario f = new Funcionario();
 		// f.setNome("Paulo Gomes");
@@ -47,56 +47,56 @@ public class Main {
 	}
 
 	// Manipulando arquivos e diretórios
-	private static void gravarArquivo() {
-		FileWriter fw = null;
-		BufferedWriter bw = null;
+//	private static void gravarArquivo() {
+//		FileWriter fw = null;
+//		BufferedWriter bw = null;
+//
+//		try {
+//			fw = new FileWriter(path, true);
+//			bw = new BufferedWriter(fw);
+//
+//			String novaLinha = "Isso é uma nova linha!!\n";
+//			String novaLinha4 = "Senai de Jandira!\n";
+//			String novaLinha5 = "Turma DS1TB!\n";
+//
+//			bw.write(novaLinha);
+//			bw.write(novaLinha4);
+//			bw.write(novaLinha5);
+//
+//			bw.flush();
+//
+//		} catch (Exception erro) {
+//			System.out.println(erro.getMessage());
+//		}
 
-		try {
-			fw = new FileWriter(path, true);
-			bw = new BufferedWriter(fw);
-
-			String novaLinha = "Isso é uma nova linha!!\n";
-			String novaLinha4 = "Senai de Jandira!\n";
-			String novaLinha5 = "Turma DS1TB!\n";
-
-			bw.write(novaLinha);
-			bw.write(novaLinha4);
-			bw.write(novaLinha5);
-
-			bw.flush();
-
-		} catch (Exception erro) {
-			System.out.println(erro.getMessage());
-		}
-
-	}
-
-	private static void lerArquivo() {
-		String path = "c:\\Users\\25132517\\ProjetoTarefas\\tarefas.txt";
-		FileReader fr = null;
-		BufferedReader br = null;
-
-		try {
-			fr = new FileReader(path);
-			br = new BufferedReader(fr);
-
-			String linha = br.readLine();
-
-			while (linha != null) {
-				String registro[] = linha.split(";");
-				System.out.println("Nome: " + registro[0]);
-				System.out.println("Tarefa: " + registro[1]);
-				System.out.println("--------------------------");
-				linha = br.readLine();
-			}
-
-		} catch (FileNotFoundException erro) {
-			System.out.println(erro.getMessage());
-		} catch (IOException erro) {
-			System.out.println(erro.getMessage());
-		} catch (Exception erro) {
-			System.out.println(erro.getMessage());
-		}
-	}
+//	}
+//
+//	private static void lerArquivo() {
+//		String path = "c:\\Users\\25132517\\ProjetoTarefas\\tarefas.txt";
+//		FileReader fr = null;
+//		BufferedReader br = null;
+//
+//		try {
+//			fr = new FileReader(path);
+//			br = new BufferedReader(fr);
+//
+//			String linha = br.readLine();
+//
+//			while (linha != null) {
+//				String registro[] = linha.split(";");
+//				System.out.println("Nome: " + registro[0]);
+//				System.out.println("Tarefa: " + registro[1]);
+//				System.out.println("--------------------------");
+//				linha = br.readLine();
+//			}
+//
+//		} catch (FileNotFoundException erro) {
+//			System.out.println(erro.getMessage());
+//		} catch (IOException erro) {
+//			System.out.println(erro.getMessage());
+//		} catch (Exception erro) {
+//			System.out.println(erro.getMessage());
+//		}
+//	}
 
 }
