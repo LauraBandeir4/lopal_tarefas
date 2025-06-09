@@ -46,7 +46,7 @@ public class FuncionarioDAO {
 		try {
 			FileFactory ff = new FileFactory();
 
-			BufferedReader br = ff.getbufferedReader();
+			BufferedReader br = ff.getBufferedReader();
 
 			String linha = "";
 
