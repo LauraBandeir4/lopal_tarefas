@@ -14,6 +14,7 @@ import br.dev.laura.tarefas.model.Funcionario;
 import br.dev.laura.tarefas.model.dao.FuncionarioDAO;
 import br.dev.laura.tarefas.ui.FrameFuncionario;
 import br.dev.laura.tarefas.ui.FrameFuncionarioList;
+import br.dev.laura.tarefas.ui.FrameGerenciador;
 
 public class Main {
 
@@ -22,7 +23,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		// new FrameFuncionario();
-		new FrameFuncionarioList();
+		new FrameGerenciador();
 
 //		FuncionarioDAO dao = new FuncionarioDAO();
 //		dao.Listar();

@@ -22,7 +22,7 @@ import br.dev.laura.tarefas.model.dao.FuncionarioDAO;
 public class FrameFuncionarioList {
 	private JLabel labelTitulo;
 	private JButton btnCadastro;
-	private JButton btnSair;
+	private JButton btnVoltar;
 
 	private JTable tabelaFuncionarios;
 	private JScrollPane scrollFuncionarios;
@@ -83,16 +83,16 @@ public class FrameFuncionarioList {
 			
 		});
 		
-		//Criando botão sair
-		btnSair = new JButton("Sair");
-		btnSair.setBounds(240, 380, 200, 40);
+		//Criando botão Voltar
+		btnVoltar = new JButton("Voltar");
+		btnVoltar.setBounds(240, 380, 200, 40);
 		
 		// Adicionando um Action Listener
-		btnSair.addActionListener(new ActionListener() {
+		btnVoltar.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new FrameFuncionario(tela);
+				new FrameGerenciador();
 				carregarDados();
 				
 			}
@@ -104,7 +104,7 @@ public class FrameFuncionarioList {
 		painel.add(labelTitulo);
 		painel.add(scrollFuncionarios);
 		painel.add(btnCadastro);
-		painel.add(btnSair);
+		painel.add(btnVoltar);
 
 		tela.setVisible(true);
 
