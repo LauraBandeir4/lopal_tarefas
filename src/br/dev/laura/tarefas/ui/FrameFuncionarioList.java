@@ -1,4 +1,5 @@
 package br.dev.laura.tarefas.ui;
+
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
@@ -18,19 +19,20 @@ import javax.swing.table.DefaultTableModel;
 import br.dev.laura.tarefas.model.Funcionario;
 import br.dev.laura.tarefas.model.dao.FuncionarioDAO;
 
-
 public class FrameFuncionarioList {
 	private JLabel labelTitulo;
 	private JButton btnCadastro;
-	
+	private JButton btnSair;
+
 	private JTable tabelaFuncionarios;
 	private JScrollPane scrollFuncionarios;
 	private DefaultTableModel modelFuncionario;
-	private String[] colunas = { "CODIGO", "NOME", "CARGO" };
+	private String[] colunas = { "CÓDIGO", "NOME", "CARGO" };
 
 	public FrameFuncionarioList() {
 		criarTela();
 	}
+
 	public void criarTela() {
 
 		JFrame tela = new JFrame();
@@ -38,12 +40,12 @@ public class FrameFuncionarioList {
 		tela.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		tela.setLayout(null);
 		tela.setLocationRelativeTo(null);
-		tela.setTitle("Listar Funcionarios");
+		tela.setTitle("Listar Funcionários");
 		tela.setResizable(false);
 
 		Container painel = tela.getContentPane();
 
-		labelTitulo = new JLabel("Cadastro de Funcionarios");
+		labelTitulo = new JLabel("Cadastro de Funcionários");
 		labelTitulo.setFont(new Font("Arial", Font.BOLD, 24));
 		labelTitulo.setForeground(Color.RED);
 		labelTitulo.setBounds(10, 10, 400, 40);
@@ -63,9 +65,12 @@ public class FrameFuncionarioList {
 		
 		carregarDados();
 		
+		//Criando botão cadastro
+		
 		btnCadastro = new JButton("Cadastro");
 		btnCadastro.setBounds(10, 380, 200, 40);
 		
+		// Adicionando um Action Listener
 		btnCadastro.addActionListener(new ActionListener() {
 			
 			@Override
@@ -75,17 +80,37 @@ public class FrameFuncionarioList {
 				carregarDados();
 				
 			}
+			
 		});
 		
+		//Criando botão sair
+		btnSair = new JButton("Sair");
+		btnSair.setBounds(240, 380, 200, 40);
+		
+		// Adicionando um Action Listener
+		btnSair.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new FrameFuncionario(tela);
+				carregarDados();
+				
+			}
+			
+			
+		});
 		
 
 		painel.add(labelTitulo);
 		painel.add(scrollFuncionarios);
 		painel.add(btnCadastro);
+		painel.add(btnSair);
 
 		tela.setVisible(true);
 
 	}
+	
+	
 	
 	private void carregarDados() {
 		FuncionarioDAO dao = new FuncionarioDAO();
@@ -107,4 +132,5 @@ public class FrameFuncionarioList {
 	}
 
 }
+
 
