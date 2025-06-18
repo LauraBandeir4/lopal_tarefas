@@ -29,13 +29,13 @@ public class FrameFuncionarioList {
 	private DefaultTableModel modelFuncionario;
 	private String[] colunas = { "CÓDIGO", "NOME", "CARGO" };
 
-	public FrameFuncionarioList() {
-		criarTela();
+	public FrameFuncionarioList(JFrame frame) {
+		criarTela(frame);
 	}
 
-	public void criarTela() {
+	public void criarTela(JFrame frame) {
 
-		JFrame tela = new JFrame();
+		JDialog tela = new JDialog(frame, true);
 		tela.setSize(500, 500);
 		tela.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		tela.setLayout(null);
@@ -53,7 +53,6 @@ public class FrameFuncionarioList {
 		modelFuncionario = new DefaultTableModel(colunas, 5) {
 			@Override
 			public boolean isCellEditable(int row, int column) {
-
 				return false;
 			}
 		};
@@ -92,7 +91,7 @@ public class FrameFuncionarioList {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new FrameGerenciador();
+				tela.dispose();
 				carregarDados();
 				
 			}

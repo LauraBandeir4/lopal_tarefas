@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class FileFactory {
 
-	private String arquivo = "C:\\Users\\25132517\\ProjetoTarefas\\funcionarios.csv";
+	private String arquivo = "C:\\Users\\Laura\\tarefas\\funcionarios2.csv";
 
 	private FileWriter fw;
 	private BufferedWriter bw;

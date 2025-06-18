@@ -28,11 +28,11 @@ public class FrameFuncionario {
 	private JButton btnSalvar;
 	private JButton btnSair;
 
-	public FrameFuncionario(JFrame frame) {
+	public FrameFuncionario(JDialog frame) {
 		criarTela(frame);
 	}
 
-	private void criarTela(JFrame frame) {
+	private void criarTela(JDialog frame) {
 		JDialog tela = new JDialog(frame, true);
 		tela.setTitle("Cadastro");
 		tela.setSize(400, 400);
@@ -88,8 +88,6 @@ public class FrameFuncionario {
 			public void actionPerformed(ActionEvent e) {
 				
 			//  Usando Show Message para mandar uma mensagem para o usuário
-				// JOptionPane.showMessageDialog(tela, "Fechando a aplicação...", "Fechar", JOptionPane.ERROR_MESSAGE);
-				JOptionPane.showConfirmDialog(tela, "Confirma a saida do Sistema?");
 				System.out.println("resposta");
 				 int resposta = JOptionPane.showConfirmDialog(tela, "Confirma a saída do sistema?");
 				 if (resposta == 0) {

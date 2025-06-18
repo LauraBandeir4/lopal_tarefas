@@ -22,7 +22,7 @@ public class FrameGerenciador {
 		tela.setTitle("Gerenciador de tarefas");
 		tela.setSize(400, 200);
 		tela.setResizable(false);
-		tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		tela.setLocationRelativeTo(null);
 		tela.setLayout(null);
 		
@@ -44,7 +44,7 @@ public class FrameGerenciador {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 			     
-				new FrameFuncionarioList();
+				new FrameFuncionarioList(tela);
 
 				
 			}
