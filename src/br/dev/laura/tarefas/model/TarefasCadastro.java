@@ -8,6 +8,7 @@ public class TarefasCadastro {
 	private String dataConclusao;
 	private String status;
 	private String responsavel;
+	
 	public String getTitulo() {
 		return titulo;
 	}

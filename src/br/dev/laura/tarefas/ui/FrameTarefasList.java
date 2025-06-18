@@ -104,20 +104,24 @@ public class FrameTarefasList {
 	
 	
 	private void carregarDados() {
-		FuncionarioDAO dao = new FuncionarioDAO();
-		List<Funcionario> funcionarios = dao.Listar();
+		Tarefasdao = new TarefasDAO();
+		List<Tarefas> tarefas = dao.Listar();
 		
-		Object[][] dados = new Object[funcionarios.size()][3];
+		Object[][] dados = new Object[tarefas.size()][3];
 		
 		int i = 0;
-		for (Funcionario f : funcionarios) {
-			dados[i][0] = f.getMatricula();
-			dados[i][1] = f.getNome();
-			dados[i][2] = f.getCargo();
+		for (tarefas t : tarefas) {
+			dados[i][0] = t.getTitulo();
+			dados[i][1] = t.getDescricao();
+			dados[i][2] = t.getDataInicial();
+			dados[i][3] = t.getPrazo();
+			dados[i][4] = t.getDataConclusao();
+			dados[i][5] = t.getDataResponsavel();
+			dados[i][6] = t.setStaus();
 			i++;
 		}
 		
-		modelFuncionario.setDataVector(dados, colunas);
+	
 		
 		
 	}
