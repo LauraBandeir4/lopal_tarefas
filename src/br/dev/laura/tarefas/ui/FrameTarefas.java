@@ -47,21 +47,6 @@ public class FrameTarefas {
 		txtTitulo.setBounds(10, 40, 150, 30);
 		txtTitulo.setEnabled(false);
 
-		labelNome = new JLabel("Nome:");
-		labelNome.setBounds(10, 75, 200, 30);
-		txtNome = new JTextField();
-		txtNome.setBounds(10, 105, 365, 30);
-
-		labelCargo = new JLabel("Cargo:");
-		labelCargo.setBounds(10, 140, 200, 30);
-		txtCargo = new JTextField();
-		txtCargo.setBounds(10, 170, 300, 30);
-
-		labelSalario = new JLabel("Salário:");
-		labelSalario.setBounds(10, 205, 150, 30);
-		txtSalario = new JTextField();
-		txtSalario.setBounds(10, 235, 150, 30);
-
 		btnSalvar = new JButton("Salvar");
 		btnSalvar.setBounds(10, 300, 120, 50);
 
